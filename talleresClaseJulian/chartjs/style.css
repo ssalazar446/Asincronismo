@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+  font-family: Poppins, 'sans-serif';
+}
+
+.chart {
+    text-align: center;
+    margin: auto;
+  }
+  
+  .row {
+    margin-bottom: 150px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 80px;
+    margin-top: 15px;
+  }
