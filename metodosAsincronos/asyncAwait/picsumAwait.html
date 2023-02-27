@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+    <title>API Fotos</title>
+</head>
+<body>
+    <!-- TITULO -->
+    <h1 class="title">Imágenes Picsum</h1>
+
+    <!-- FILTRO -->
+    <section class="container">
+        <div class="selection">
+            <!-- CHECKBOX -->
+            <label for="grayscale">
+                Escala de grises
+                <input type="checkbox" id="myCheck" checked="false">
+            
+            <!-- LISTA DESPLEGABLE -->
+            <label for="blur">
+                Blur
+                <select name="blur" id="blur">
+                    <option value="0" selected>0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </label>
+
+            <!-- LISTA DESPLEGABLE -->
+            <label for="page">
+                Página
+                <select name="page" id="page">
+                    <option value="0" selected hidden>Seleccione un valor</option>
+                    <option value="1">Página 1</option>
+                    <option value="2">Página 2</option>
+                    <option value="3">Página 3</option>
+                    <option value="4">Página 4</option>
+                    <option value="5">Página 5</option>
+                    <option value="6">Página 6</option>
+                    <option value="7">Página 7</option>
+                </select>
+            </label>
+
+            <!-- CANTIDAD DE IMAGENES -->
+            <label for="page">
+                Cantidad
+                <input type="number" class="limit" id="limit"  min="1" max="100" x-moz-errormessage="Por favor seleccione una cantidad entre 1 - 100">
+            </label>
+        </div>
+
+    </section>
+
+    <!-- AQUI TERMINA EL FILTRO -->
+    <!-- AQUI VA EL BOTÓN -->
+    <section class="container">
+        <button id="btn_aceptar" class="btn_acep">ACEPTAR</button>
+    </section>
+
+    <!-- AQUI VAN LA LISTA DE IMAGENES -->
+    <section class="container">
+            <div id="contenido">
+            </div>
+    </section>
+
+<!-- PAGINACIÓN -->
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+    
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

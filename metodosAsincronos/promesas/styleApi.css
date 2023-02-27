@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.box-form {
+    display: flex;
+    align-items: center;
+ 
+}
+
+.labelPaises {
+    margin-right: 5px;
+}
+
+body * {
+    font-family: Poppins, sans-serif;
+}
+
+h1 {
+    padding: 10px;
+    text-align: center;
+}
+
+form {
+    background-color: burlywood;
+    margin: 0 auto;
+    width: 1100px;
+    height: auto;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: rgba(87, 87, 87, 0.541) 2px 2px 2px 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    border-radius: 10px;
+}
+
+
+table {
+    margin-top: 25px;
+    padding: 25px;
+    width: 650px;
+    border-collapse: collapse;
+    overflow-y: scroll;
+    border-spacing: 0;
+    border: 1px solid #3e7751;
+  }
+  
+  th, td {
+    text-align: center;
+    padding: 16px;
+    border: 1px solid #3e7751;
+  }
+
+  td {
+    color: #000;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #3e7751;
+  }
+
+  .paises {
+    width: 320px;
+  }
