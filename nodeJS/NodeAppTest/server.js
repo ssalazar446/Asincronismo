@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
 //Rutas
-app.use('/api/users/', require('./api/users'));
+app.use('/api/users/', require('./api/v1/routes/users.routes'));
 
 //Se inicia el servidor
 app.listen(app.get('port'), ()=>{
