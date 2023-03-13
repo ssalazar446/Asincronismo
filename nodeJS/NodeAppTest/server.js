@@ -12,9 +12,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
 //Rutas
-app.get('/', (req, res) =>{
-    res.send({Title: 'Hello ADSI 023'});
-});
+app.use('/api/users/', require('./api/users'));
 
 //Se inicia el servidor
 app.listen(app.get('port'), ()=>{
