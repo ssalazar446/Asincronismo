@@ -1,12 +1,15 @@
 const express = require('express'); //Requerir Framework
 const app = express(); //Crear una instancia de Express
 const morgan = require('morgan'); 
+const bodyParser = require('body-parser');
 
 //Configuraciones
 app.set('port', 4000);
 
 //Middlewares
-app.use(morgan('combined'));
+app.use(morgan('dev'));
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
 
 //Rutas
 app.get('/', (req, res) =>{
