@@ -1,6 +1,6 @@
-const db = require('../../../models');
+/* const db = require('../../../models');
 const { Router } =  require('express')
-const router = Router ();
+const router = Router (); */
 
 //Método GET
 /* router.get('/', (req, res) =>{
@@ -8,7 +8,7 @@ const router = Router ();
 }); */
 
 //Método GET con todos los Users
-router.get('/', async(req, res) => {
+/* router.get('/', async(req, res) => {
     try{
         let users = await db.User.findAll();
         res.status(200).send({Data:users, Msg: 'Success'});
@@ -26,10 +26,10 @@ router.get('/:id', async (req, res) => {
     } catch (error){
         res.status(400).send({Data:null, Msg: 'Users error'});
     }
-})
+}) */
 
 //Método PUT -Actualizar 
-router.put('/:id', async (req, res) => {
+/* router.put('/:id', async (req, res) => {
     try {
         let id = req.params.id;
         let {name, email, password} = req.body;
@@ -40,10 +40,10 @@ router.put('/:id', async (req, res) => {
     } catch (error){
         res.status(400).send({Data:null, Msg: 'Error update'});
     }
-})
+}) */
 
 //Método DELETE
-router.delete('/:id', async (req, res) => {
+/* router.delete('/:id', async (req, res) => {
     try {
         let id = req.params.id;
         let user = await db.User.destroy({
@@ -53,15 +53,15 @@ router.delete('/:id', async (req, res) => {
     } catch (error){
         res.status(400).send({Data:null, Msg: 'Error deleting user'});
     }
-})
+}) */
 
 
 //Método POST
-router.post('/', async (req, res) =>{
+/* router.post('/', async (req, res) =>{ */
   /*   let name = req.body.name;
     let email = req.body.name;
     let password = req.body.password; */
-    let {name, email, password} = req.body;
+   /*  let {name, email, password} = req.body;
     try {
         await db.User.create ({
             name,
@@ -75,5 +75,25 @@ router.post('/', async (req, res) =>{
 
 
 });
+
+module.exports = router; */
+
+
+const {Router} = require('express');
+const userController = require('../../../controllers/userController');
+
+//Creamos el router para poder usar los verbos HTTP
+const router = Router();
+
+router.get('/', userController.getAllUsers);
+
+router.get('/:userId', userController.getUser);
+
+router.post('/', userController.createUser);
+
+router.put('/:userId', userController.updateUser);
+
+router.delete('/:userId', userController.deleteUser);
+
 
 module.exports = router;
